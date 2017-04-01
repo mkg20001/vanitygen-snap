@@ -22,6 +22,8 @@ parts:
     source-type: git
     source-branch: master
     build-packages:
-      - openssl-dev
+      - libssl-dev
+      - gcc
+      - libpcre3-dev
     prepare: |
       echo '\ninstall:\n\tinstall -Ds ./vanitygen $(DESTDIR)/bin/vanitygen' >> Makefile
